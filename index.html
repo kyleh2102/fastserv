@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Compose Layouts</title>
+<style>
+    @font-face {
+    font-family: "Yahoo Sans";
+    src: url('https://s.yimg.com/os/fontserver/YahooSans/Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Yahoo Sans";
+    src: url('https://s.yimg.com/os/fontserver/YahooSans/Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+
+.container{
+  box-sizing: border-box;
+  position: relative;
+  width: 375px;
+  height: 723px;
+  top: 89px;
+  bottom : 50%;
+  background: #FFFFFF;
+  border-radius: 2px;
+  display: grid;
+  padding : 0;
+  grid-template-columns: 1fr;
+  margin : auto;
+  grid-auto-rows: 10px 623px;
+  gap: 10px;
+}
+
+.simple-template{
+  background: #FFFFFF url(https://s.yimg.com/nq/mailplusplus/mobileAssets/2b80c92e546885995cf3e8c7924435a5/JSCommonSources/newsletter/assets/Template_simple.png) no-repeat center!important;
+  width: 145px;
+  height: 184px;
+  left: 48px;
+  top: 269.76px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),;
+  border-radius: 9.26518px;
+}
+.festive-template{
+  background: #FFFFFF url(https://s.yimg.com/nq/mailplusplus/mobileAssets/2b80c92e546885995cf3e8c7924435a5/JSCommonSources/newsletter/assets/Template_celebration.png) no-repeat center!important;
+  width: 145px;
+  height: 184px;
+  left: 48px;
+  top: 269.76px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),;
+  border-radius: 9.26518px;
+}
+.poll-template{
+  background: #FFFFFF url(https://s.yimg.com/nq/mailplusplus/mobileAssets/2b80c92e546885995cf3e8c7924435a5/JSCommonSources/newsletter/assets/Template_poll.png) no-repeat center!important;
+  width: 145px;
+  height: 184px;
+  left: 48px;
+  top: 269.76px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 9.26518px;
+}
+.informative-template{
+  background: #FFFFFF url(https://s.yimg.com/nq/mailplusplus/mobileAssets/2b80c92e546885995cf3e8c7924435a5/JSCommonSources/newsletter/assets/Template_informative.png) no-repeat center!important;
+  width: 145px;
+  height: 184px;
+  left: 48px;
+  top: 269.76px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1),;
+  border-radius: 9.26518px;
+}
+.template{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin : auto;
+}
+.template-container{
+  display: flex;
+  flex-direction : column;
+  gap : 5px;
+}
+.text {
+  position: relative;
+  width: 43px;
+  left : 3rem;
+  height: 20px;
+  font-family: 'Yahoo Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  bottom:.5rem;
+}
+  .popular-layouts-title {
+    width: 119px;
+    height: 20px;
+    font-family: 'Yahoo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+.popular-layouts-description {
+   width: 218px;
+   height: 20px;
+   font-family: 'Yahoo Sans';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   color: #000000;
+
+  }
+  .layout-header{
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1.5rem 1.5rem;
+    position: relative ;
+    left : 2rem;
+  }
+
+  .template{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .layout-heading {
+    display : none;
+  }
+  .close-button{
+    display:none;
+}
+
+
+@media only screen and (min-width: 768px) and (orientation:landscape) {
+  .container{
+      position: absolute;
+      width:552px;
+      height: 280px;
+      margin : auto;
+      left: 1rem;
+      top:140px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr 4fr;
+      gap : 5px;
+      background: #FFFFFF;
+    }
+
+  .template{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .popular-layouts{
+    display: none;
+  }
+  .layout-heading {
+    display : inline;
+    position: relative;
+    right : 2rem;
+    width: 43px;
+    height: 20px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+  }
+  .text{
+    position: relative;
+    width: 35px;
+    height: 20px;
+    left: 3rem;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    color:  #5B636A;
+  }
+  .close-button{
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    left : 90%;
+    bottom : 50%;
+    background : transparent url(https://s.yimg.com/nq/mailplusplus/mobileAssets/2b80c92e546885995cf3e8c7924435a5/JSCommonSources/newsletter/assets/close-icon.png) no-repeat center;
+    border-color: transparent;
+}
+
+}
+
+
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui,user-scalable=no">
+</head>
+<body>
+  <script src="https://s.yimg.com/nq/mailplusplus/mobileAssets/9e5d4f5b932c0864d787245e665b1350/JSCommonSources/newsletter/scripts/compose_layout.js">
+  </script>
+
+    <div class="container">
+        <div class="layout-header">
+            <p class="layout-heading">Layout</p>
+            <p class="popular-layouts popular-layouts-title ">Popular Layouts</p>
+            <p class="popular-layouts popular-layouts-description">Choose one and customize it later.</p>
+        </div>
+        <div class="template">
+        <div class= "simple-template-container template-container">
+            <a href="simple.html" class="simple-template template-types" title="Simple"></a>
+            <p class="text">Simple</p>
+          </div>
+          <div class="festive-template-container template-container">
+            <a href="celebration.html" class="festive-template template-types" title="festive"></a>
+            <p class="text">Festive</p>
+          </div>
+          <div class="poll-template-container template-container">
+            <a href="poll.html" class="poll-template template-types" title="poll"></a>
+            <p class="text">Poll</p>
+          </div>
+          <div class="informative-template-container template-container">
+            <a href="informative.html" class="informative-template template-types" title="informative"></a>
+            <p class="text">Informative</p>
+          </div>
+        </div>
+        <script>
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            if(params.twoStep === 'false'){
+              document.querySelectorAll('.template-types').forEach((anchorTag)=>anchorTag.href='#');
+              const templateContainer = document.querySelector('.template');
+              templateContainer.addEventListener('click' , (e)=>{
+              if(e.target.title === 'Simple'){
+                  window.ComposeNewsletter.addNewsLetterToComposeWindow();
+                }
+              });
+            }
+          </script>
+
+
+</body>
+</html>
